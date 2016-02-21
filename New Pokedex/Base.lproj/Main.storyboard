@@ -45,7 +45,10 @@
                                             <constraint firstAttribute="width" constant="30" id="9Oh-1R-Ain"/>
                                             <constraint firstAttribute="height" constant="30" id="ab1-lQ-1z4"/>
                                         </constraints>
-                                        <state key="normal" image="music" backgroundImage="I"/>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IH1-f7-urw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.36635514221231813" blue="0.19384749951922875" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +147,6 @@
     </scenes>
     <resources>
         <image name="202" width="120" height="120"/>
-        <image name="I" width="16" height="16"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="256" height="256"/>
     </resources>

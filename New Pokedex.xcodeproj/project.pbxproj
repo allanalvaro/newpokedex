@@ -20,6 +20,7 @@
 		9D3FB4751C7A28E10010138F /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FB4741C7A28E10010138F /* Pokemon Hollow.ttf */; };
 		9D3FB4771C7A29730010138F /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3FB4761C7A29730010138F /* Pokemon Solid.ttf */; };
 		9D4B738F1C7A2D56009D0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4B738D1C7A2D56009D0374 /* Main.storyboard */; };
+		9D4B73911C7A3060009D0374 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D4B73901C7A3060009D0374 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9D3FB4741C7A28E10010138F /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		9D3FB4761C7A29730010138F /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		9D4B738E1C7A2D56009D0374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D4B73901C7A3060009D0374 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3FB4741C7A28E10010138F /* Pokemon Hollow.ttf */,
+				9D4B73901C7A3060009D0374 /* music.mp3 */,
 				9D3FB4761C7A29730010138F /* Pokemon Solid.ttf */,
 				9D3FB46A1C79FADB0010138F /* ARCADEPI.TTF */,
 				9D3FB4651C79F3F00010138F /* pokemon.csv */,
@@ -187,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4B73911C7A3060009D0374 /* music.mp3 in Resources */,
 				9D4B738F1C7A2D56009D0374 /* Main.storyboard in Resources */,
 				9D3FB45E1C79EEF40010138F /* LaunchScreen.storyboard in Resources */,
 				9D3FB46B1C79FADB0010138F /* ARCADEPI.TTF in Resources */,
