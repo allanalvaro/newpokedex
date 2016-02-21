@@ -16,7 +16,7 @@ class Pokemon {
     var name: String {
         return _name
     }
-    var pokedexId: Int {
+    var pokedexId: Int!{
         return _pokedexId
     }
     
