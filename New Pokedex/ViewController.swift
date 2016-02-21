@@ -32,10 +32,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let path = NSBundle.mainBundle().pathForResource("music", ofType: "mp3")!
         
         do {
-            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            musicPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
             musicPlayer.play()
+         
         } catch let err as NSError {
             print(err.debugDescription)
         }
@@ -96,8 +97,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-    @IBAction func musicBtnPressed(sender: AnyObject) {
-        
+    @IBAction func musicBtnPressed(sender: UIButton!) {
+        if musicPlayer.playing {
+            musicPlayer.stop()
+            sender.alpha = 0.2
+        } else {
+            musicPlayer.play()
+            sender.alpha = 1.0
+        }
     }
  
     

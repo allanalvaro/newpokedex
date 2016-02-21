@@ -62,7 +62,7 @@
                                     <constraint firstItem="eKm-lC-6IU" firstAttribute="centerX" secondItem="ZiT-xV-OgI" secondAttribute="centerX" id="vqO-Zv-3Od"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-8n-bdV">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1s-8n-bdV">
                                 <rect key="frame" x="20" y="116" width="560" height="464"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jgp-EI-Kla">
