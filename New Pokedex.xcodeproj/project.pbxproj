@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D38ACB51C7A569F00A8A5DE /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D38ACB41C7A569F00A8A5DE /* PokemonDetailVC.swift */; };
 		9D3FB4511C79EEF40010138F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FB4501C79EEF40010138F /* AppDelegate.swift */; };
 		9D3FB4531C79EEF40010138F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FB4521C79EEF40010138F /* ViewController.swift */; };
 		9D3FB4591C79EEF40010138F /* New_Pokedex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FB4571C79EEF40010138F /* New_Pokedex.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D38ACB41C7A569F00A8A5DE /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		9D3FB44D1C79EEF40010138F /* New Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Pokedex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3FB4501C79EEF40010138F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D3FB4521C79EEF40010138F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3FB4521C79EEF40010138F /* ViewController.swift */,
+				9D38ACB41C7A569F00A8A5DE /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				9D3FB4531C79EEF40010138F /* ViewController.swift in Sources */,
 				9D3FB4691C79F5FA0010138F /* Pokemon.swift in Sources */,
 				9D3FB4591C79EEF40010138F /* New_Pokedex.xcdatamodeld in Sources */,
+				9D38ACB51C7A569F00A8A5DE /* PokemonDetailVC.swift in Sources */,
 				9D3FB4511C79EEF40010138F /* AppDelegate.swift in Sources */,
 				9D3FB46D1C79FFE10010138F /* PokeCell.swift in Sources */,
 			);
