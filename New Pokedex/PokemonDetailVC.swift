@@ -64,19 +64,11 @@ class PokemonDetailVC: UIViewController {
             }
             evoLbl.text = str
         }
-
-        
-        
         
     }
 
     @IBAction func backBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-
-
-
-
 
 }

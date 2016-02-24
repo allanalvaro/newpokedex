@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var musicBtn: UIButton!
     
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
@@ -22,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        musicBtn.alpha = 0.2
+        
         collection.delegate = self
         collection.dataSource = self
         searchBar.delegate = self

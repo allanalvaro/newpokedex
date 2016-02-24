@@ -140,13 +140,14 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="L1s-8n-bdV" id="bqV-Tb-tn7"/>
+                        <outlet property="musicBtn" destination="1Sn-cb-Kl5" id="iA6-as-wNC"/>
                         <outlet property="searchBar" destination="WPY-lE-3C5" id="w0P-SG-QOi"/>
                         <segue destination="P4B-cf-A4G" kind="show" identifier="PokemonDetailVC" id="clZ-4A-vKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="537"/>
+            <point key="canvasLocation" x="181" y="348"/>
         </scene>
         <!--Pokemon DetailVC-->
         <scene sceneID="mPX-e7-eb0">
@@ -344,8 +345,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AK0-ud-Phs">
                                 <rect key="frame" x="0.0" y="437" width="600" height="35"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Evolution: Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-Z0-67N">
-                                        <rect key="frame" x="172" y="4" width="256" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-Z0-67N">
+                                        <rect key="frame" x="60" y="3" width="480" height="29"/>
                                         <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="21"/>
                                         <color key="textColor" red="0.8770656086387435" green="0.8770656086387435" blue="0.8770656086387435" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -394,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfT-aa-xEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="324"/>
+            <point key="canvasLocation" x="819" y="348"/>
         </scene>
     </scenes>
     <resources>
