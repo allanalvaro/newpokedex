@@ -20,13 +20,68 @@ class Pokemon {
     private var _weight: String!
     private var _attack: String!
     private var _nextEvolutionTxt: String!
+    private var _nextEvolutionId: String!
+    private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
     
-    
+    var description: String {
+        if _description == nil {
+            _description = ""
+        }
+        return _description
+    }
+    var type: String {
+        if _type == nil {
+            _type = ""
+        }
+        return _type
+    }
+    var nextEvolutionTxt: String {
+        if _nextEvolutionTxt == nil {
+            _nextEvolutionTxt = ""
+        }
+        return _nextEvolutionTxt
+    }
+    var nextEvolutionId: String {
+        if _nextEvolutionId == nil {
+            _nextEvolutionId = ""
+        }
+        return _nextEvolutionId
+    }
+    var nextEvolutionLvl: String {
+        if _nextEvolutionLvl == nil {
+            _nextEvolutionLvl = ""
+        }
+        return _nextEvolutionLvl
+    }
+    var defense: String {
+        if _defense == nil {
+            _defense = ""
+        }
+        return _defense
+    }
+    var height: String {
+        if _height == nil {
+            _height = ""
+        }
+        return _height
+    }
+    var weight: String {
+        if _weight == nil {
+            _weight = ""
+        }
+        return _weight
+    }
+    var attack: String {
+        if _attack == nil {
+            _attack = ""
+        }
+        return _attack
+    }
     var name: String {
         return _name
     }
-    var pokedexId: Int!{
+    var pokedexId: Int {
         return _pokedexId
     }
     
@@ -34,7 +89,7 @@ class Pokemon {
         self._name = name
         self._pokedexId = pokedexId
         
-        self._pokemonUrl = "\(BASE_URL)\(URL_POKEMON)/\(self._pokedexId)/"
+        self._pokemonUrl = "\(URL_BASE)\(URL_POKEMON)/\(self._pokedexId)/"
     }
     
     func downloadPokemonDetails(completed: DownloadComplete) {
@@ -82,6 +137,54 @@ class Pokemon {
                     self._type = ""
                 }
                 print(self._type)
+                
+                if let descArr = dict["descriptions"] as? [Dictionary<String, String>] where descArr.count > 0 {
+                    
+                    if let url = descArr[0]["resource_uri"] {
+                        
+                        let nsurl = NSURL(string: "\(URL_BASE)\(url)")!
+                        Alamofire.request(.GET, nsurl).responseJSON { response in
+                            let result = response.result
+                            
+                            if let descDict = result.value as? Dictionary<String, AnyObject> {
+                                if let description = descDict["description"] as? String {
+                                    self._description = description
+                                    print(self._description)
+                                }
+                            }
+                            completed()
+                        }
+                    }
+                } else {
+                    self._description = ""
+                }
+                
+                if let evolutions = dict["evolutions"] as? [Dictionary<String, AnyObject>] where evolutions.count > 0 {
+                    if let to = evolutions[0]["to"] as? String {
+                        
+                        if to.rangeOfString("mega") == nil {
+                            
+                            if let uri = evolutions[0]["resource_uri"] as? String {
+                                
+                                let newStr = uri.stringByReplacingOccurrencesOfString("/api/v1/pokemon/", withString: "")
+                                let num = newStr.stringByReplacingOccurrencesOfString("/", withString: "")
+
+                                self._nextEvolutionId = num
+                                self._nextEvolutionTxt = to
+                            
+                                if let lvl = evolutions[0]["level"] as? Int {
+                                self._nextEvolutionLvl = "\(lvl)"
+                                } else {
+                                    self._nextEvolutionLvl = ""
+                                }
+                            
+                                print(self._nextEvolutionLvl)
+                                print(self._nextEvolutionTxt)
+                                print(self._nextEvolutionId)
+                            }
+                        }
+                    }
+                }
             }
 
         
